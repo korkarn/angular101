@@ -1,3 +1,3 @@
 <h2>Parent component</h2>
 
-<app-other [name]="parentName"></app-other>
+<app-other [name]="parentName" (changeNameEvent)="onResponse($event)"></app-other>

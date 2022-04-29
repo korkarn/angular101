@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   parentName = {id: 1, name: "worakarn"};
+
+  onResponse(event: any) {
+    console.log("On Response in Paraent");
+    console.table(event);
+  }
 }
