@@ -7,7 +7,7 @@ import { User } from './models/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  parentName = new User(1, "Worakarn");
+  parentName: User = {id:1, name: "Workarn"};
 
   onResponse(event: User) {
     console.log("On Response in Paraent");
