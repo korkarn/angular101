@@ -1,17 +1,3 @@
-<h2>Hello Angular 13</h2>
-name : <input type="text" [value]="name" #mayname (input)="dosth(mayname.value)" />
-<br/>
-name2 : <input type="text" #mayname2 (input)="dosth(mayname2.value)" />
-<br/>
-name3 (2-ways binding) :
- <input type="text" [(ngModel)]="name" />
- <input type="text" [ngModel]="name" (ngModelChange)="name=$event" />
+<h2>Parent component</h2>
 
-<p *ngIf="!name">Please enter your name</p>
-<p *ngIf="name">Hi, {{name}}</p>
-
-<p *ngIf="name; else showDefaultMessage">Hi, {{name | xyz}}</p>
-<ng-template #showDefaultMessage>Please enter your name</ng-template>
-
-<h3>Use NgFor</h3>
-<div *ngFor="let d of datas">{{d.id}} => {{d.name}}</div>
+<app-other></app-other>
