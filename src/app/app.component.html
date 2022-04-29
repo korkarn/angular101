@@ -1,5 +1,7 @@
 <h2>Hello Angular 13</h2>
-name : <input type="text" (input)="dosth($event)" />
+name : <input type="text" [value]="name" #mayname (input)="dosth(mayname.value)" />
+<br/>
+name2 : <input type="text" #mayname2 (input)="dosth(mayname2.value)" />
 
 <p>Pleasw input your name</p>
 <p>Hi, {{name}}</p>
