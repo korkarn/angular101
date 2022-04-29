@@ -7,5 +7,9 @@ name3 (2-ways binding) :
  <input type="text" [(ngModel)]="name" />
  <input type="text" [ngModel]="name" (ngModelChange)="name=$event" />
 
-<p>Pleasw input your name</p>
-<p>Hi, {{name}}</p>
+<p *ngIf="!name">Please enter your name</p>
+<p *ngIf="name">Hi, {{name}}</p>
+
+<p *ngIf="name; else showDefaultMessage">Hi, {{name}}</p>
+<ng-template #showDefaultMessage>Please enter your name</ng-template>
+
