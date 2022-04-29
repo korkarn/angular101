@@ -1,3 +1,5 @@
-<h2>Parent component</h2>
+<a routerLink="/">Main</a> | 
+<a routerLink="/user">User component</a> | 
+<a routerLink="/other">Other component</a>
 
-<app-other [name]="parentName" (changeNameEvent)="onResponse($event)"></app-other>
+<router-outlet></router-outlet>
