@@ -2,6 +2,10 @@
 name : <input type="text" [value]="name" #mayname (input)="dosth(mayname.value)" />
 <br/>
 name2 : <input type="text" #mayname2 (input)="dosth(mayname2.value)" />
+<br/>
+name3 (2-ways binding) :
+ <input type="text" [(ngModel)]="name" />
+ <input type="text" [ngModel]="name" (ngModelChange)="name=$event" />
 
 <p>Pleasw input your name</p>
 <p>Hi, {{name}}</p>
