@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello';
+  name = 'user';
+
+  dosth(event: Event) {
+    let val = (event.target as HTMLInputElement).value;
+    console.log(val)
+    this.name = val;
+  }
 }
