@@ -13,3 +13,5 @@ name3 (2-ways binding) :
 <p *ngIf="name; else showDefaultMessage">Hi, {{name}}</p>
 <ng-template #showDefaultMessage>Please enter your name</ng-template>
 
+<h3>Use NgFor</h3>
+<div *ngFor="let d of datas">{{d.id}} => {{d.name}}</div>

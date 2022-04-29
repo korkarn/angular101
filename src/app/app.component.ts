@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = '';
 
+  datas = [
+    {id: 1, name: "worakarn"},
+    {id: 2, name: "karn"},
+  ];
+
   dosth(newName: string) {
     console.log(newName)
     this.name = newName;
