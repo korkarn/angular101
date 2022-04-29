@@ -10,7 +10,7 @@ name3 (2-ways binding) :
 <p *ngIf="!name">Please enter your name</p>
 <p *ngIf="name">Hi, {{name}}</p>
 
-<p *ngIf="name; else showDefaultMessage">Hi, {{name}}</p>
+<p *ngIf="name; else showDefaultMessage">Hi, {{name | uppercase}}</p>
 <ng-template #showDefaultMessage>Please enter your name</ng-template>
 
 <h3>Use NgFor</h3>
