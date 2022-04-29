@@ -15,8 +15,19 @@ export class UserComponent implements OnInit {
     this.route.navigate(['/']);
   }
 
+  results: any
+
   ngOnInit(): void {
-    this.userService.getAllUsers();
+    this.userService.getAllUsers().subscribe({
+      next: data => {
+        console.log(data);
+        this.results = data;
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
+    
   }
 
 }
