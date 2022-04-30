@@ -9,6 +9,7 @@ import { XyzPipe } from './xyz.pipe';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { AssignmentComponent } from './assignment/assignment.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     OtherComponent,
     XyzPipe,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    AssignmentComponent
   ],
   imports: [
     BrowserModule,

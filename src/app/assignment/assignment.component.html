@@ -1,0 +1,5 @@
+<h2>Todos</h2>
+<input type="text" [value]="name" #myname (input)="dosth(myname.value)" />
+<button onClick={addTodo} >Add</button>
+<p *ngIf="!name"></p>
+<p *ngIf="name">{{name}}</p>
