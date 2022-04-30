@@ -1,5 +1,7 @@
 <h2>Todos</h2>
-<input type="text" [value]="name" #myname (input)="dosth(myname.value)" />
-<button onClick={addTodo} >Add</button>
-<p *ngIf="!name"></p>
-<p *ngIf="name">{{name}}</p>
+<input type="text" [placeholder]="pTodo" [(ngModel)]="sTodo" #todoInp />
+<button (click)="addTodo(todoInp.value)" >Add</button>
+<p>{{todoAc}} remaining out of {{todoLen}} task</p>
+<ul *ngFor="let item of arrTodo">
+    <li [ngClass]="{'strike': item.active == false}" (click)="updTodo(item)" >{{item.text}}</li>
+</ul>
